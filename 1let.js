@@ -21,22 +21,22 @@ for (let index = 0; index < 10; index++) {
         console.log(index);
     });
 }
-// arr.forEach(element => {
-//     element();
-// });
+arr.forEach(element => {
+    element();
+});
 // 2. 闭包
 // 立即调用函数表达式（IIFEs）
-// var arr = [];
-// for (let index = 0; index < 10; index++) {
-//     arr.push((function (n) {
-//         return function () {
-//             console.log(n);
-//         }
-//     })(index))
-// }
-// arr.forEach(element => {
-//     element();
-// });
+var arr = [];
+for (let index = 0; index < 10; index++) {
+    arr.push((function (n) {
+        return function () {
+            console.log(n);
+        }
+    })(index))
+}
+arr.forEach(element => {
+    element();
+});
 
 
 // 全局块级绑定
